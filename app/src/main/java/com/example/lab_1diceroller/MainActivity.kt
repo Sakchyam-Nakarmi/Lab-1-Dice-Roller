@@ -10,5 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        val btn:Button = findViewById(R.id.button)
+        val txt:TextView = findViewById(R.id.textView)
+        btn.setOnClickListener{
+            val diceNum = (1..6).random()
+            txt.text= "" + diceNum
+        }
     }
 }
